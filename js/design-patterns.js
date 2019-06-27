@@ -17,6 +17,7 @@ typeof numberTwo; // returns 'number'
 var numberThree = numberOne + numberTwo;
 typeof numberThree; // returns 'number'
 
+console.log(" ");
 console.log("=============================");
 console.log("numberOne + numberTwo = " + numberThree);
 console.log("=============================");
@@ -30,7 +31,21 @@ typeof objectTwo; // returns 'object'
 
 /* JavaScript is a dynamic language, adding properties to objects is also quite easy. This can be done even afer the object has been created. The following code creates */
 
-var objectOne = { value : 7}; // object array with perperties declaration
+var objectOne = { PropNameForVal : 7}; // object array with perperties declaration
 var objectTwo = {}; // create an empty array object declaration
-objectTwo.value = 8; // use dot notation to assign a value
+objectTwo.PropNameForVal = 8; // use dot notation to assign a value
 
+console.log(" ");
+console.log(objectOne);
+console.log(objectTwo);
+
+
+/* Objects contain both data and functionality. We've only seen the data part so far.
+Fortunately, in JavaScript, functions are first class objects. Functions can be passed around and assigned to variables. Let's try adding some functions to an object, as seen in the following code: */
+
+var myObject = {};
+    myObject.myNameAssignment = function() {
+        console.log(" ");
+        console.log("myNameAssignment Function using dot notation");
+    }
+    myObject.myNameAssignment();
