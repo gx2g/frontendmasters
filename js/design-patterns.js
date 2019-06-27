@@ -65,10 +65,24 @@ myObject.myNameAssignment();
 
 /* We can also mix data and functionality in an object */
 
+// we create an object asign greetings 
 var myObject = {
     greeting: "Hello World",
     myNameAssignment: function() {
         console.log(this.greeting);
+    }
+}
+myObject.myNameAssignment();
+
+
+var myObject =  {
+    greeting: "Hey there World", 
+    myNameAssignment: function(){
+        console.log(this.greeting);
+        this.doOtherThings();
+    },
+    doOtherThings: function() {
+        console.log(this.greeting.split("").reverse().join(""));
     }
 }
 myObject.myNameAssignment();
