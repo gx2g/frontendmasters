@@ -67,22 +67,25 @@ myObject.myNameAssignment();
 
 // we create an object asign greetings 
 var myObject = {
-    greeting: "Hello World",
-    myNameAssignment: function() {
-        console.log(this.greeting);
+    greeting: "Hello World", // data
+    myNameAssignment: function() { // functionality 
+        console.log(this.greeting); // using .this qualifier to address variable within the myNameAssignment function
     }
 }
 myObject.myNameAssignment();
 
 
+/* This is also true if we have a number of functions within an Object */ 
+
 var myObject =  {
-    greeting: "Hey there World", 
-    myNameAssignment: function(){
+    greeting: "Robert Resendez", // data
+    myNameAssignment: function(){ // functionality
         console.log(this.greeting);
-        this.doOtherThings();
+        this.doOtherThings(); // this. is bound to the owner of the function in which it is found. 
     },
     doOtherThings: function() {
         console.log(this.greeting.split("").reverse().join(""));
     }
 }
 myObject.myNameAssignment();
+
