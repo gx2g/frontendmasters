@@ -43,9 +43,32 @@ console.log(objectTwo);
 /* Objects contain both data and functionality. We've only seen the data part so far.
 Fortunately, in JavaScript, functions are first class objects. Functions can be passed around and assigned to variables. Let's try adding some functions to an object, as seen in the following code: */
 
-var myObject = {};
-    myObject.myNameAssignment = function() {
-        console.log(" ");
-        console.log("myNameAssignment Function using dot notation");
+
+var myObject = {}; // creating empty object array
+
+// using the dot notation with a value function 
+myObject.myNameAssignment = function() { 
+    console.log(" ");
+    console.log("myNameAssignment Function using dot notation");
+}
+myObject.myNameAssignment(); // calling function
+
+
+/* above syntex can be a bit painful to write so lets try this */
+var myObject = { 
+    myNameAssignment: function() {
+        console.log("object array with function statement");
     }
-    myObject.myNameAssignment();
+}
+myObject.myNameAssignment();
+
+
+/* We can also mix data and functionality in an object */
+
+var myObject = {
+    greeting: "Hello World",
+    myNameAssignment: function() {
+        console.log(this.greeting);
+    }
+}
+myObject.myNameAssignment();
