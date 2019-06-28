@@ -83,9 +83,10 @@ var myObject =  {
         console.log(this.greeting);
         this.doOtherThings(); // this. is bound to the owner of the function in which it is found. 
     },
-    doOtherThings: function() {
+    this.doOtherThings: function() {
         console.log(this.greeting.split("").reverse().join(""));
     }
 }
-myObject.myNameAssignment();
+var instance = myObject();
+instance.myNameAssignment();
 
