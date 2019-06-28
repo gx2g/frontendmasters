@@ -77,16 +77,16 @@ myObject.myNameAssignment();
 
 /* This is also true if we have a number of functions within an Object */ 
 
-var myObject =  {
-    greeting: "Robert Resendez", // data
-    myNameAssignment: function(){ // functionality
+var ThingDoer = function(){
+    this.greeting = "Robert";
+    this.doThings = function() {
         console.log(this.greeting);
-        this.doOtherThings(); // this. is bound to the owner of the function in which it is found. 
-    },
-    this.doOtherThings: function() {
+        this.doOtherThings();
+    };
+    this.doOtherThings = function() {
         console.log(this.greeting.split("").reverse().join(""));
-    }
+    };
 }
-var instance = myObject();
-instance.myNameAssignment();
+var instance = new ThingDoer();
+instance.doThings();//prints hello world then dlrow olleh
 
