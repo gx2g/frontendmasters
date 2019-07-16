@@ -65,11 +65,11 @@ myObject.myNameAssignment();
 
 /* We can also mix data and functionality in an object */
 
-// we create an object asign greetings 
+// we create an object assign greetings 
 var myObject = {
     greeting: "Hello World", // data
     myNameAssignment: function() { // functionality 
-        console.log(this.greeting); // using .this qualifier to address variable within the myNameAssignment function
+        console.log(this.greeting); // using .this qualifier to address variable within the myObject scope. 
     }
 }
 myObject.myNameAssignment();
