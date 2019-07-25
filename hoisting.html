@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width = device-width, initial-scale = 1.0">
+        <meta http-equiv="X-UA-Compatible" content = "ie=edge">
+        <title> Keat </title>
+    </head>
+    
+    <body>
+       
+       /* Hoisting 
+       https://scotch.io/tutorials/understanding-hoisting-in-javascript
+      */
+       
+        <script>
+        /* "use strict"; */
+            
+        var favFood = "grapes";    
+        
+        var foodThoughts = function ()  {
+            console.log("Original favourite food: " + favFood);
+            var favFood = "sushi";
+            console.log("New favourite food: " + favFood);
+        };
+            
+        foodThoughts(); 
+        
+        </script>
+        
+                
+    </body>
+</html>
