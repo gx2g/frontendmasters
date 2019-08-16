@@ -1,3 +1,47 @@
+/*
+concept or an ideal that is fundemental to the rest of of the course to understanding and building our knowledge of javascript. 
+
+Syntax Parsers,
+Execution Contexts and
+Lexical Environments
+
+These seem they are complicated sounding words, but they are pretty straight foward. 
+
+
+====================================================================
+Syntax Parser: A program that reads your code and determines what it does and if it's grammer is valid. Someone else has wrote a program to translate it for the computer. (interpiters and compilers) 
+
+
+=======================================================================
+Lexical Environment: Lexical means having to do with words or grammar. A lexical environment exists in programming languages in which where you write something is important. 
+
+Code is translated into something the computer can understand. Where you see things writen gives you an idea of how it will be dealth with. We are talking about where it's written and what surounds it. 
+
+
+==============================================================================
+Execution Context: A wrapper to help you manage the code that is running.
+
+There is a lots of lexical environments which one is currently running in managed via execution contexts. it can contain things beyond what you've written in your code. 
+
+==============================================================================
+Name / Value Pairs and Objects: 
+
+A Name which maps to a unique value. 
+
+That name my be definded more then once but it can only have one value in any given context. Remember we are talking about execution context. so any execution context that is a section of code that is running. A name can only exist and be defined with one value. however that value maybe more name value pairs. But that value could be other collections of name/values.
+
+Address = '100 Main St."
+ 
+*/
+
+
+
+
+
+
+
+
+
 // Objects in JavaScript
 
 // Undefined
@@ -77,7 +121,7 @@ myObject.myNameAssignment();
 
 /* This is also true if we have a number of functions within an Object */ 
 
-var ThingDoer = function(){
+var thingDoer = function(){
     this.greeting = "Robert";
     this.doThings = function() {
         console.log(this.greeting);
@@ -87,6 +131,19 @@ var ThingDoer = function(){
         console.log(this.greeting.split("").reverse().join(""));
     };
 }
-var instance = new ThingDoer();
-instance.doThings();//prints hello world then dlrow olleh
+var instance = new thingDoer(); // creating new instance
+instance.doThings();//prints hello world then treboR
+
+
+/* This syntax allows for a constructor to be defined and for new objects to be created from this function. Constructors without return values are functions that are called as an object is created. In JavaScript, the constructor actually returns the object created. You can even assign internal properties using the constructor by making
+them part of the initial function, as follows: */
+
+var thingDoer2 = function(greeting){
+this.greeting = greeting;
+this.doThings = function() {
+console.log(this.greeting);
+};
+}
+var instance = new thingDoer2("hello universe");
+instance.doThings();
 
